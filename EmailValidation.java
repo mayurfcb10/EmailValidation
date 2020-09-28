@@ -8,9 +8,9 @@ public class ValidateEmail {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the email pattern to be validated");
 		String patternValidate = sc.next();
-		boolean matcher1 = patternValidate.matches("([.][A-Za-z]{2,4})");
+		boolean matcher = patternValidate.matches("^[._+-]+[A-Za-z]+");
 
-		if(matcher1 == true) {
+		if(matcher == true) {
 			System.out.println(patternValidate+" matches the Email Format");
 		}else {
 			System.out.println(patternValidate+" does not match the Format");
